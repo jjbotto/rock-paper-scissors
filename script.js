@@ -40,6 +40,7 @@ function resetGame() {
     roundResult.textContent = "";
     winner.textContent = "";
     resetButton.remove();
+    playerChoices.forEach(button => button.disabled = false);
 }
 
 function checkWinner() {
@@ -54,6 +55,7 @@ function checkWinner() {
             score.appendChild(winner);
         }
         score.appendChild(resetButton);
+        playerChoices.forEach(button => button.disabled = true);
 
         resetButton.addEventListener("click", () => resetGame());
     }

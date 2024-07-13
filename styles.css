@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Blackadder+ITC&display=swap');
+
+.choices {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.choices img {
+    height: 200px;
+    width: auto;
+    transition: transform 0.5s;
+
+}
+
+.choices button:hover:active,
+.choices img:hover:active {
+    transform: scale(1.2);
+}
+
+.choices button {
+    background-color: transparent;
+    border-color: transparent;
+    transition: transform 0.2s;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-family: "Blackadder ITC" , cursive;
+    font-size: 100px;
+}
+
+.selections {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Blackadder ITC" , cursive;
+    font-size: 30px;
+}
+
+.round-result {
+    display: flex;
+    justify-content: center;
+    font-family: "Blackadder ITC" , cursive;
+    font-size: 50px;
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Blackadder ITC" , cursive;
+    font-size: 20px;
+}
+
+
+
