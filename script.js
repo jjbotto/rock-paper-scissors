@@ -3,18 +3,23 @@ let computerScore = 0;
 
 const playerChoices = document.querySelectorAll(".choices button");
 const playerSelection = document.getElementById("player-selection");
+playerSelection.textContent = "";
 const computerSelection = document.getElementById("computer-selection");
+computerSelection.textContent = "";
 const roundResult = document.getElementById("result");
 const playerScoreDisplay = document.getElementById("player-score");
 const computerScoreDisplay = document.getElementById("computer-score");
 const score = document.querySelector(".score");
 const winner = document.createElement("h2");
 const resetButton = document.createElement("button");
+resetButton.setAttribute("id", "reset-button");
 resetButton.textContent = "Reset Game";
 
 playerChoices.forEach(button => {
     button.addEventListener("click", () => playRound(button.id));
 });
+
+
 
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 100);
@@ -47,11 +52,11 @@ function checkWinner() {
     if (playerScore === 5 || computerScore === 5) {
 
         if (playerScore === 5) {
-            winner.textContent = "YOU WIN THE GAME!";
+            roundResult.textContent = "YOU WIN THE GAME!";
             score.appendChild(winner);
         }
         else {
-            winner.textContent = "YOU LOSE THE GAME!";
+            roundResult.textContent = "YOU LOSE THE GAME!";
             score.appendChild(winner);
         }
         score.appendChild(resetButton);
